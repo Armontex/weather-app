@@ -1,0 +1,300 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+/* Reset and base styles  */
+* {
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Links */
+a,
+a:link,
+a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+/* Common */
+aside,
+nav,
+footer,
+header,
+section,
+main {
+  display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+ul,
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+img,
+svg {
+  max-width: 100%;
+  height: auto;
+}
+
+address {
+  font-style: normal;
+}
+
+/* Form */
+input,
+textarea,
+button,
+select {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  background-color: transparent;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button,
+input[type=submit] {
+  display: inline-block;
+  box-shadow: none;
+  background-color: transparent;
+  background: none;
+  cursor: pointer;
+}
+
+input:focus,
+input:active,
+button:focus,
+button:active {
+  outline: none;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+label {
+  cursor: pointer;
+}
+
+legend {
+  display: block;
+}
+
+input[type=file] {
+  max-width: 100%;
+}
+
+body {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  font-family: var(--font-family);
+  background: var(--bg-clr);
+  overflow-x: hidden;
+}
+
+:root {
+  --font-family: "Montserrat", sans-serif;
+}
+
+:root {
+  --bg-clr: #343D4B;
+}
+
+.weather__content {
+  display: flex;
+}
+
+.weather-main {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  height: 350px;
+  border-radius: 20px 0 0 20px;
+  padding: 20px 15px;
+  background: linear-gradient(180deg, rgba(255, 179, 71, 0.6), rgba(255, 204, 51, 0.6)), url("../../assets/media/images/sunny.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.weather-main__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.weather-status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.weather-status__label {
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.weather-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.action-btn--map {
+  opacity: 50%;
+}
+
+.weather-main__temperature {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.temp-current {
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.temp-feels {
+  font-size: 22px;
+  font-weight: 600;
+  opacity: 70%;
+  background-color: rgba(34, 40, 49, 0.4);
+  border-radius: 10px;
+  padding: 0 10px;
+}
+
+.weather-main__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.datetime {
+  display: flex;
+  flex-direction: column;
+}
+
+.datetime__time {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.datetime__date {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.location {
+  align-self: end;
+}
+
+.location__name {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.weather-details {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 40%;
+  height: 350px;
+  background-color: #222831;
+  border-radius: 0 20px 20px 0;
+  padding: 50px;
+}
+
+.details-cards {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.details-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.details-card__value {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.coords-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.coord-input {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.coord-input__icon {
+  position: absolute;
+  left: -40px;
+  width: 30px;
+  height: 30px;
+}
+
+.coord-input__field {
+  width: 100%;
+  background-color: #54585E;
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.btn-add {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  height: 40px;
+  width: 40px;
+  opacity: 0.8;
+}
+
+.container {
+  margin: 0 auto;
+  margin-top: 30px;
+  padding: 0 60px;
+  font-size: 20px;
+  font-weight: 500;
+  color: #fff;
+}/*# sourceMappingURL=main.css.map */

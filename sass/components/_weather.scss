@@ -1,0 +1,165 @@
+.weather__content {
+  display: flex;
+}
+
+.weather-main {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  height: 350px;
+  border-radius: 20px 0 0 20px;
+  padding: 20px 15px;
+  background: 
+    linear-gradient(180deg, rgba(255, 179, 71, 60%), rgba(255, 204, 51, 60%)),
+    url("../../assets/media/images/sunny.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.weather-main__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.weather-status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.weather-status__label {
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.weather-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.action-btn {
+  &--map {
+    opacity: 50%;
+  }
+}
+
+
+.weather-main__temperature {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.temp-current {
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.temp-feels {
+  font-size: 22px;
+  font-weight: 600;
+  opacity: 70%;
+  background-color: rgba(34, 40, 49, 40%);
+  border-radius: 10px;
+  padding: 0 10px;
+}
+
+.weather-main__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.datetime {
+  display: flex;
+  flex-direction: column;
+}
+
+.datetime__time {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.datetime__date {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.location {
+  align-self: end;
+}
+
+.location__name {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.weather-details {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 40%;
+  height: 350px;
+  background-color: #222831;
+  border-radius: 0 20px 20px 0;
+  padding: 50px;
+}
+
+.details-cards {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.details-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.details-card__value {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.coords-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.coord-input {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.coord-input__icon {
+  position: absolute;
+  left: -40px;
+  width: 30px;
+  height: 30px;
+}
+
+.coord-input__field {
+  width: 100%;
+  background-color: #54585E;
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.btn-add {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  height: 40px;
+  width: 40px;
+  opacity: 0.8;
+}
