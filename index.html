@@ -1,93 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="assets/styles/main.css" />
+  <script type="module" src="src/js/main.js"></script>
   <title>WeatherApp</title>
 </head>
 
 <body>
   <main>
-    <div class="weather container">
-
-      <div class="weather__content">
-
-        <div class="weather-main">
-          <div class="weather-main__header">
-            <div class="weather-status">
-              <img src="assets/media/icons/CLEARday.svg" alt="" class="weather-status__icon" />
-              <span class="weather-status__label">Солнечно</span>
-            </div>
-
-            <div class="weather-actions">
-              <button class="action-btn action-btn--info">
-                <img src="assets/media/icons/info.svg" alt="" class="action-btn__icon" />
-              </button>
-              <button class="action-btn action-btn--map">
-                <img src="assets/media/icons/public.svg" alt="" class="action-btn__icon" />
-              </button>
-            </div>
-          </div>
-
-          <div class="weather-main__temperature">
-            <span class="temp-current">29 °C</span>
-            <span class="temp-feels">По ощущению 25 °C</span>
-          </div>
-
-          <div class="weather-main__footer">
-            <div class="datetime">
-              <span class="datetime__time">17:00</span>
-              <span class="datetime__date">20 Июн 2022</span>
-            </div>
-
-            <div class="location">
-              <img src="assets/media/icons/Location.svg" alt="" class="location__icon">
-              <span class="location__name">Location</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="weather-details">
-          <div class="details-cards">
-            <div class="details-card">
-              <img src="assets/media/icons/add.svg" alt="" class="details-card__icon">
-              <span class="details-card__value">5 км/ч</span>
-            </div>
-
-            <div class="details-card">
-              <img src="assets/media/icons/compare_arrows.svg" alt="" class="details-card__icon">
-              <span class="details-card__value">741 мм рт. ст.</span>
-            </div>
-
-            <div class="details-card">
-              <img src="assets/media/icons/humidity.svg" alt="" class="details-card__icon">
-              <span class="details-card__value">70%</span>
-            </div>
-          </div>
-
-          <div class="coords-inputs">
-            <div class="coord-input">
-              <img src="assets/media/icons/swap_vert.svg" alt="" class="coord-input__icon">
-              <input type="text" placeholder="Долгота" class="coord-input__field">
-            </div>
-
-            <div class="coord-input">
-              <img src="assets/media/icons/swap_horiz.svg" alt="" class="coord-input__icon">
-              <input type="text" placeholder="Широта" class="coord-input__field">
-            </div>
-          </div>
-
-          <button class="btn-add">
-            <img src="assets/media/icons/add.svg" alt="" class="btn-add__icon">
-          </button>
-        </div>
-
-      </div>
-
-    </div>
-
+    <div id="root" class="container"></div>
   </main>
 </body>
 

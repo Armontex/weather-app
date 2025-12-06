@@ -1,0 +1,109 @@
+<template id="weather-template">
+  <div class="weather__content">
+    <div class="weather-main">
+      <div class="weather-main__header">
+        <div class="weather-status">
+          <img
+            src="..."
+            alt=""
+            class="weather-status__icon"
+          />
+          <span class="weather-status__label">Status</span>
+        </div>
+
+        <div class="weather-actions">
+          <button class="action-btn action-btn--info">
+            <img
+              src="assets/media/icons/info.svg"
+              alt=""
+              class="action-btn__icon"
+            />
+          </button>
+          <button class="action-btn action-btn--map">
+            <img
+              src="assets/media/icons/public.svg"
+              alt=""
+              class="action-btn__icon"
+            />
+          </button>
+        </div>
+      </div>
+
+      <div class="weather-main__temperature">
+        <span class="temp-current">Current Temp</span> <!-- 29 °C -->
+        <span class="temp-feels">Feels Temp</span> <!-- По ощущению 25 °C -->
+      </div>
+
+      <div class="weather-main__footer">
+        <div class="datetime">
+          <span class="datetime__time">Time</span> <!-- 17:00 -->
+          <span class="datetime__date">Date</span> <!-- 20 Июн 2022 -->
+        </div>
+
+        <div class="location">
+          <img
+            src="assets/media/icons/Location.svg"
+            alt=""
+            class="location__icon"
+          />
+          <span class="location__name">Location</span> <!-- Екатеренбург, Россия -->
+        </div>
+      </div>
+    </div>
+
+    <div class="weather-details">
+      <div class="details-cards">
+        <div class="details-card">
+          <img
+            src="assets/media/icons/add.svg"
+            alt=""
+            class="details-card__icon"
+          />
+          <span class="details-card__value">Value</span> <!-- 5 км/ч -->
+        </div>
+
+        <div class="details-card">
+          <img
+            src="assets/media/icons/compare_arrows.svg"
+            alt=""
+            class="details-card__icon"
+          />
+          <span class="details-card__value">Value</span> <!-- 741 мм рт. ст. -->
+        </div>
+
+        <div class="details-card">
+          <img
+            src="assets/media/icons/humidity.svg"
+            alt=""
+            class="details-card__icon"
+          />
+          <span class="details-card__value">Value</span> <!-- 70% -->
+        </div>
+      </div>
+
+      <div class="coords-inputs">
+        <div class="coord-input">
+          <img
+            src="assets/media/icons/swap_vert.svg"
+            alt=""
+            class="coord-input__icon"
+          />
+          <input type="text" placeholder="Долгота" class="coord-input__field" />
+        </div>
+
+        <div class="coord-input">
+          <img
+            src="assets/media/icons/swap_horiz.svg"
+            alt=""
+            class="coord-input__icon"
+          />
+          <input type="text" placeholder="Широта" class="coord-input__field" />
+        </div>
+      </div>
+
+      <button class="btn-add ">
+        <img src="assets/media/icons/add.svg" alt="" class="btn-add__icon" />
+      </button>
+    </div>
+  </div>
+</template>

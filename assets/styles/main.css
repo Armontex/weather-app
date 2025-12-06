@@ -137,7 +137,7 @@ body {
   display: flex;
   flex-direction: column;
   width: 60%;
-  height: 350px;
+  height: 300px;
   border-radius: 20px 0 0 20px;
   padding: 20px 15px;
   background: linear-gradient(180deg, rgba(255, 179, 71, 0.6), rgba(255, 204, 51, 0.6)), url("../../assets/media/images/sunny.jpg");
@@ -229,10 +229,10 @@ body {
   flex-direction: column;
   justify-content: space-between;
   width: 40%;
-  height: 350px;
+  height: 300px;
   background-color: #222831;
   border-radius: 0 20px 20px 0;
-  padding: 50px;
+  padding: 30px 50px;
 }
 
 .details-cards {
