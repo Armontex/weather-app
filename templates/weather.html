@@ -12,7 +12,7 @@
         </div>
 
         <div class="weather-actions">
-          <button class="action-btn action-btn--info">
+          <button class="action-btn action-btn--info active">
             <img
               src="assets/media/icons/info.svg"
               alt=""
@@ -53,16 +53,16 @@
 
     <div class="weather-details">
       <div class="details-cards">
-        <div class="details-card">
+        <div class="details-card details-card--air">
           <img
-            src="assets/media/icons/add.svg"
+            src="assets/media/icons/air.svg"
             alt=""
             class="details-card__icon"
           />
           <span class="details-card__value">Value</span> <!-- 5 км/ч -->
         </div>
 
-        <div class="details-card">
+        <div class="details-card details-card--pressure">
           <img
             src="assets/media/icons/compare_arrows.svg"
             alt=""
@@ -71,7 +71,7 @@
           <span class="details-card__value">Value</span> <!-- 741 мм рт. ст. -->
         </div>
 
-        <div class="details-card">
+        <div class="details-card details-card--humidity">
           <img
             src="assets/media/icons/humidity.svg"
             alt=""
@@ -88,7 +88,7 @@
             alt=""
             class="coord-input__icon"
           />
-          <input type="text" placeholder="Долгота" class="coord-input__field" />
+          <input type="text" placeholder="Долгота" class="coord-input__field coord-input__field--lon" />
         </div>
 
         <div class="coord-input">
@@ -97,7 +97,7 @@
             alt=""
             class="coord-input__icon"
           />
-          <input type="text" placeholder="Широта" class="coord-input__field" />
+          <input type="text" placeholder="Широта" class="coord-input__field coord-input__field--lat" />
         </div>
       </div>
 

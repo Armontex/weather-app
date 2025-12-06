@@ -129,6 +129,15 @@ body {
   --bg-clr: #343D4B;
 }
 
+.container {
+  margin: 0 auto;
+  margin-top: 15px;
+  padding: 0 60px;
+  font-size: 20px;
+  font-weight: 500;
+  color: #fff;
+}
+
 .weather__content {
   display: flex;
 }
@@ -140,6 +149,9 @@ body {
   height: 300px;
   border-radius: 20px 0 0 20px;
   padding: 20px 15px;
+  background: #9d9d9d;
+}
+.weather-main--sunny {
   background: linear-gradient(180deg, rgba(255, 179, 71, 0.6), rgba(255, 204, 51, 0.6)), url("../../assets/media/images/sunny.jpg");
   background-size: cover;
   background-position: center;
@@ -165,10 +177,6 @@ body {
 .weather-actions {
   display: flex;
   gap: 10px;
-}
-
-.action-btn--map {
-  opacity: 50%;
 }
 
 .weather-main__temperature {
@@ -274,7 +282,7 @@ body {
 
 .coord-input__field {
   width: 100%;
-  background-color: #54585E;
+  background-color: #54585e;
   padding: 15px;
   border-radius: 10px;
   font-size: 16px;
@@ -290,11 +298,19 @@ body {
   opacity: 0.8;
 }
 
-.container {
-  margin: 0 auto;
-  margin-top: 30px;
-  padding: 0 60px;
-  font-size: 20px;
-  font-weight: 500;
-  color: #fff;
+.action-btn {
+  opacity: 0.5;
+}
+.action-btn.active {
+  opacity: 1;
+}
+
+.coord-input__field.error {
+  color: red;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }/*# sourceMappingURL=main.css.map */

@@ -4,8 +4,12 @@
 @use 'base/fonts';
 @use 'base/colors';
 
-// COMPONENTS
-@use 'components/weather';
-
 // LAYOUTS
 @use 'layouts/container';
+
+// COMPONENTS
+@use 'components/weather';
+@use 'components/action-btn';
+@use 'components/input-coords';
+
+@use 'root';

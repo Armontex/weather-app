@@ -9,11 +9,18 @@
   height: 300px;
   border-radius: 20px 0 0 20px;
   padding: 20px 15px;
-  background: 
-    linear-gradient(180deg, rgba(255, 179, 71, 60%), rgba(255, 204, 51, 60%)),
-    url("../../assets/media/images/sunny.jpg");
-  background-size: cover;
-  background-position: center;
+  background: #9d9d9d;
+
+  &--sunny {
+    background: linear-gradient(
+        180deg,
+        rgba(255, 179, 71, 60%),
+        rgba(255, 204, 51, 60%)
+      ),
+      url("../../assets/media/images/sunny.jpg");
+    background-size: cover;
+    background-position: center;
+  }
 }
 
 .weather-main__header {
@@ -38,11 +45,6 @@
   gap: 10px;
 }
 
-.action-btn {
-  &--map {
-    opacity: 50%;
-  }
-}
 
 
 .weather-main__temperature {
@@ -148,7 +150,7 @@
 
 .coord-input__field {
   width: 100%;
-  background-color: #54585E;
+  background-color: #54585e;
   padding: 15px;
   border-radius: 10px;
   font-size: 16px;
