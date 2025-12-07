@@ -3,6 +3,7 @@ export async function getWeather(lat, lon) {
     latitude: lat,
     longitude: lon,
     timezone: "auto",
+    wind_speed_unit: "ms",
     current: [
       "temperature_2m",
       "relative_humidity_2m",

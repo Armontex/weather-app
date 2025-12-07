@@ -1,23 +1,46 @@
 import { addClass, hasClass, removeClass } from "../utils/dom.js";
+import { generateWeaherData } from "../utils/generate-weather-data.js";
 import { inputValidation } from "../validation/input-coords-validation.js";
+import { updateWeaherCard } from "./weather.js";
 
 export function initInputCoords() {
-  document.addEventListener("input", (e) => {
-    const input = e.target.closest(".coord-input__field");
-    if (!input) return;
+  document.addEventListener("input", async (e) => {
+    const currentInput = e.target.closest(".coord-input__field");
+    if (!currentInput) return;
 
-    let value = input.value;
-    const type = hasClass(input, "coord-input__field--lon") ? "lon" : "lat";
+    let currentValue = currentInput.value;
+    const currentType = hasClass(currentInput, "coord-input__field--lon")
+      ? "lon"
+      : "lat";
 
-    if (!inputValidation(value, type)) {
-      addClass(input, "error");
+    if (!inputValidation(currentValue, currentType)) {
+      addClass(currentInput, "error");
       return;
     }
 
-    if (hasClass(input, "error")) removeClass(input, "error");
+    if (hasClass(currentInput, "error")) removeClass(currentInput, "error");
 
-    value = parseFloat(value);
+    currentValue = parseFloat(currentValue);
 
-    // TODO: setTimeout 3s на поиск
+    //
+
+    const coordsInput = currentInput.parentElement.parentElement;
+    const otherType = currentType === "lat" ? "lon" : "lat";
+    const otherInput = coordsInput.querySelector(
+      `.coord-input__field--${otherType}`
+    );
+    let otherValue = otherInput.value;
+
+    if (!inputValidation(otherValue, otherType)) {
+      return;
+    }
+    
+    otherValue = parseFloat(otherValue);
+    const currentCard = coordsInput.closest(".weather__content");
+    const newData =
+      currentType === "lat"
+        ? await generateWeaherData(currentValue, otherValue)
+        : await generateWeaherData(otherValue, currentValue);
+    updateWeaherCard(currentCard, newData);
   });
 }

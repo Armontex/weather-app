@@ -42,7 +42,7 @@ export function normalizeWeatherData(data) {
     )} ${data.current_units.apparent_temperature}`,
     time: time,
     date: date,
-    air_value: `${Math.round(data.current.wind_speed_10m)} км/ч`,
+    air_value: `${Math.round(data.current.wind_speed_10m)} м/с`,
     pressure_value: `${Math.round(
       data.current.surface_pressure * PRESSURE_COEF
     )} мм рт. ст.`,
@@ -54,10 +54,19 @@ export function normalizeLocationData(data) {
   const addr = data.address || {};
   const city = addr.city || addr.town || addr.village || addr.county;
   const country = addr.country || "";
+  const display_name = data.display_name || "";
 
   if (city) {
-    return `${city.length <= 20 ? city : city.slice(0, 20) + '...' }, ${country}`;
-  } else {
+    return `${
+      city.length <= 20 ? city : city.slice(0, 20) + "..."
+    }, ${country}`;
+  }
+
+  if (country) {
     return country;
   }
+
+  return `${
+    display_name.length <= 20 ? display_name : display_name.slice(0, 20) + "..."
+  }`;
 }

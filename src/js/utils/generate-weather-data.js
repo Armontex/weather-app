@@ -1,29 +1,20 @@
 import { getLocation } from "../api/nominatim.js";
 import { getWeather } from "../api/open-meteo.js";
-import { initBtnActions } from "../components/action-btn.js";
-import { initInputCoords } from "../components/input-coords.js";
-import { createWeatherCard } from "../components/weather.js";
 import { NOT_DATA } from "../constants/not-data.js";
-import {
-  normalizeLocationData,
-  normalizeWeatherData,
-} from "./normalize-data.js";
+import { normalizeLocationData, normalizeWeatherData } from "./normalize-data.js";
 
-export async function generateWeatherCard(lat, lon) {
+export async function generateWeaherData(lat, lon) {
   if (isNaN(lat) || isNaN(lon)) {
-    const card = await createWeatherCard(NOT_DATA);
-    initBtnActions();
-    initInputCoords();
-    return card;
+    return NOT_DATA;
   }
-  
+
   const weatherData = await getWeather(lat, lon);
   const locationData = await getLocation(lat, lon);
 
   const normalizeWeather = normalizeWeatherData(weatherData);
   const normalizeLocation = normalizeLocationData(locationData);
 
-  const card = await createWeatherCard({
+  return {
     bg_status: normalizeWeather.bg_status,
     status_icon: normalizeWeather.status_icon,
     status: normalizeWeather.status,
@@ -35,9 +26,5 @@ export async function generateWeatherCard(lat, lon) {
     air_value: normalizeWeather.air_value,
     pressure_value: normalizeWeather.pressure_value,
     humidity_value: normalizeWeather.humidity_value,
-  });
-
-  initBtnActions();
-  initInputCoords();
-  return card;
+  };
 }

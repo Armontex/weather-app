@@ -1,0 +1,6 @@
+.btn-add {
+  opacity: 1;
+}
+.btn-add.active {
+  opacity: 0;
+}/*# sourceMappingURL=add-btn.css.map */
