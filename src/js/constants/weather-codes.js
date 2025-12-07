@@ -125,43 +125,43 @@ export const WEATHER_CODES_TO_BG_STATUS = {
 };
 
 export const WEAHER_CODES_TO_ICON = {
-  0: "/assets/media/icons/CLEARday.svg",
+  0: "assets/media/icons/CLEARday.svg",
 
-  1: "/assets/media/icons/CLOUD.svg",
-  2: "/assets/media/icons/CLOUD.svg",
-  3: "/assets/media/icons/CLOUD.svg",
+  1: "assets/media/icons/CLOUD.svg",
+  2: "assets/media/icons/CLOUD.svg",
+  3: "assets/media/icons/CLOUD.svg",
 
-  45: "/assets/media/icons/FOG.svg",
-  48: "/assets/media/icons/FOG.svg",
+  45: "assets/media/icons/FOG.svg",
+  48: "assets/media/icons/FOG.svg",
 
-  51: "/assets/media/icons/DRIZZLE.svg",
-  53: "/assets/media/icons/DRIZZLE.svg",
-  55: "/assets/media/icons/DRIZZLE.svg",
+  51: "assets/media/icons/DRIZZLE.svg",
+  53: "assets/media/icons/DRIZZLE.svg",
+  55: "assets/media/icons/DRIZZLE.svg",
 
-  56: "/assets/media/icons/FREEZING_DRIZZLE.svg",
-  57: "/assets/media/icons/FREEZING_DRIZZLE.svg",
+  56: "assets/media/icons/FREEZING_DRIZZLE.svg",
+  57: "assets/media/icons/FREEZING_DRIZZLE.svg",
 
-  61: "/assets/media/icons/RAIN.svg",
-  63: "/assets/media/icons/RAIN.svg",
-  65: "/assets/media/icons/RAIN.svg",
+  61: "assets/media/icons/RAIN.svg",
+  63: "assets/media/icons/RAIN.svg",
+  65: "assets/media/icons/RAIN.svg",
 
-  66: "/assets/media/icons/FREEZE_RAIN.svg",
-  67: "/assets/media/icons/FREEZE_RAIN.svg",
+  66: "assets/media/icons/FREEZE_RAIN.svg",
+  67: "assets/media/icons/FREEZE_RAIN.svg",
 
-  71: "/assets/media/icons/SNOWfall.svg",
-  73: "/assets/media/icons/SNOWfall.svg",
-  75: "/assets/media/icons/SNOWfall.svg",
+  71: "assets/media/icons/SNOWfall.svg",
+  73: "assets/media/icons/SNOWfall.svg",
+  75: "assets/media/icons/SNOWfall.svg",
 
-  77: "/assets/media/icons/SNOWgrains.svg",
+  77: "assets/media/icons/SNOWgrains.svg",
 
-  80: "/assets/media/icons/SHOWERS.svg",
-  81: "/assets/media/icons/SHOWERS.svg",
-  82: "/assets/media/icons/SHOWERS.svg",
+  80: "assets/media/icons/SHOWERS.svg",
+  81: "assets/media/icons/SHOWERS.svg",
+  82: "assets/media/icons/SHOWERS.svg",
 
-  85: "/assets/media/icons/SNOW_SHOWERS.svg",
-  86: "/assets/media/icons/SNOW_SHOWERS.svg",
+  85: "assets/media/icons/SNOW_SHOWERS.svg",
+  86: "assets/media/icons/SNOW_SHOWERS.svg",
 
-  95: "/assets/media/icons/thunderstorm_with_rain.svg",
-  96: "/assets/media/icons/thunderstorm_with_rain.svg",
-  99: "/assets/media/icons/thunderstorm_with_rain.svg",
+  95: "assets/media/icons/thunderstorm_with_rain.svg",
+  96: "assets/media/icons/thunderstorm_with_rain.svg",
+  99: "assets/media/icons/thunderstorm_with_rain.svg",
 }
