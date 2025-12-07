@@ -153,7 +153,26 @@ body {
 }
 .weather-main--sunny {
   background: linear-gradient(180deg, rgba(255, 179, 71, 0.6), rgba(255, 204, 51, 0.6)), url("../../assets/media/images/sunny.jpg");
-  background-size: cover;
+  background-position: center;
+}
+.weather-main--cloud {
+  background: linear-gradient(135deg, rgba(127, 143, 166, 0.7), rgba(178, 190, 195, 0.7)), url("../../assets/media/images/cloudy.jpg");
+  background-position: center;
+}
+.weather-main--fog {
+  background: linear-gradient(-180deg, rgba(198, 208, 218, 0.7), rgba(228, 235, 241, 0.7)), url("../../assets/media/images/fog.jpg");
+  background-position: center;
+}
+.weather-main--rainy {
+  background: linear-gradient(140deg, rgba(44, 62, 80, 0.7), rgba(76, 161, 175, 0.7)), url("../../assets/media/images/rainy.jpg");
+  background-position: center;
+}
+.weather-main--snow-fall {
+  background: linear-gradient(155deg, rgba(184, 205, 230, 0.7), rgba(234, 241, 248, 0.7)), url("../../assets/media/images/snowfall.jpg");
+  background-position: center;
+}
+.weather-main--thunderstorm {
+  background: linear-gradient(165deg, rgba(35, 37, 38, 0.7), rgba(62, 81, 81, 0.7)), url("../../assets/media/images/thunderstorm.jpg");
   background-position: center;
 }
 
