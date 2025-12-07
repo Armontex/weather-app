@@ -2,6 +2,7 @@ export async function getWeather(lat, lon) {
   const params = new URLSearchParams({
     latitude: lat,
     longitude: lon,
+    timezone: "auto",
     current: [
       "temperature_2m",
       "relative_humidity_2m",
