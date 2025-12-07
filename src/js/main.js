@@ -3,6 +3,7 @@ import { initAddBtn } from "./components/add-btn.js";
 import { initInputCoords } from "./components/input-coords.js";
 import { addWeatherCard } from "./utils/dom.js";
 import { getCurrentPosition } from "./utils/navigator.js";
+import { inputValidation } from "./validation/input-coords-validation.js";
 
 document.addEventListener("DOMContentLoaded", async () => {
   initAddBtn();
@@ -18,5 +19,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     lon = NaN;
   }
 
-  await addWeatherCard(lat, lon);
+  const card = await addWeatherCard(lat, lon);
+  card.querySelector(".coord-input__field--lat").value = inputValidation(lat, "lat") ? lat : "";
+  card.querySelector(".coord-input__field--lon").value = inputValidation(lon, "lon")  ? lon : "";
 });

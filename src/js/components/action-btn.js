@@ -1,4 +1,5 @@
 import { hasClass, addClass, removeClass } from "../utils/dom.js";
+import { hideMapCard, showMapCard } from "./map-card.js";
 
 export function initBtnActions() {
   document.addEventListener("click", (e) => {
@@ -14,5 +15,12 @@ export function initBtnActions() {
     removeClass(mapBtn, "active");
 
     addClass(btn, "active");
+    const card = btn.closest('.weather__content');
+    if (hasClass(mapBtn, 'active')) {
+      showMapCard(card);
+    }
+    else {
+      hideMapCard(card);
+    }
   });
 }

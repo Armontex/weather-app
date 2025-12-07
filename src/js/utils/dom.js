@@ -8,6 +8,10 @@ export const hasClass = (el, cls) => el.classList.contains(cls);
 
 export async function addWeatherCard(lat, lon) {
   const data = await generateWeaherData(lat, lon);
-  const card = await createWeatherCard(data);
-  document.querySelector("#root").appendChild(card);
+  const cardFragment = await createWeatherCard(data);
+  const root = document.querySelector("#root");
+  root.appendChild(cardFragment);
+
+  const card = root.lastElementChild;
+  return card;
 }

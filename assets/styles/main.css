@@ -260,6 +260,9 @@ body {
   border-radius: 0 20px 20px 0;
   padding: 30px 50px;
 }
+.weather-details--map-active {
+  padding: 0;
+}
 
 .details-cards {
   display: flex;
@@ -334,8 +337,17 @@ body {
   opacity: 0;
 }
 
+.map-slot {
+  height: 100%;
+  width: 100%;
+}
+
 #root {
   display: flex;
   flex-direction: column;
   gap: 15px;
+}
+
+.hidden {
+  display: none;
 }/*# sourceMappingURL=main.css.map */
