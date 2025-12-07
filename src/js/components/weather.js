@@ -2,7 +2,7 @@ import { addClass } from "../utils/dom.js";
 import { loadTemplate } from "../utils/load-template.js";
 
 async function initWeatherTemplate() {
-  return await loadTemplate("../../../templates/weather.html");
+  return await loadTemplate("/weather-app/templates/weather.html");
 }
 
 export async function createWeatherCard(data) {
