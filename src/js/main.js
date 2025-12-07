@@ -1,6 +1,7 @@
 import { initBtnActions } from "./components/action-btn.js";
 import { initInputCoords } from "./components/input-coords.js";
 import { createWeatherCard } from "./components/weather.js";
+import { getCurrentPosition } from "./utils/navigator.js";
 
 async function main() {
   const card = await createWeatherCard({
@@ -18,6 +19,8 @@ async function main() {
   });
 
   document.querySelector("#root").appendChild(card);
+
+  
 }
 
 main();
