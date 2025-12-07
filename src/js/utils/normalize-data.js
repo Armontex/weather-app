@@ -2,16 +2,17 @@ import {
   RU_WEATHER_CODES,
   WEAHER_CODES_TO_ICON,
   WEATHER_CODES_TO_BG_STATUS,
-} from "../constants/weather-codes";
+} from "../constants/weather-codes.js";
 
 const PRESSURE_COEF = 0.75;
 
 export function normalizeDateTime(data) {
+  const dateObj = new Date(data.current.time);
   const time =
     dateObj.toLocaleTimeString("ru-RU", {
       hour: "2-digit",
       minute: "2-digit",
-    }) + `(${data.timezone_abbreviation})`;
+    }) + ` (${data.timezone_abbreviation})`;
   const date = dateObj.toLocaleDateString("ru-RU", {
     day: "2-digit",
     month: "short",
@@ -45,19 +46,18 @@ export function normalizeWeatherData(data) {
     pressure_value: `${Math.round(
       data.current.surface_pressure * PRESSURE_COEF
     )} мм рт. ст.`,
-    humidity_value: `${date.current.relative_humidity_2m}%`,
+    humidity_value: `${data.current.relative_humidity_2m}%`,
   };
 }
 
 export function normalizeLocationData(data) {
   const addr = data.address || {};
   const city = addr.city || addr.town || addr.village || addr.county;
-  const country = addr.country || '';
+  const country = addr.country || "";
 
   if (city) {
-    return `${city}, ${country}`;
+    return `${city.length <= 20 ? city : city.slice(0, 20) + '...' }, ${country}`;
   } else {
     return country;
   }
 }
-
