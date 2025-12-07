@@ -41,6 +41,11 @@ WeatherApp — приложение для отображения актуаль
 - `assets` — изображения и прочие ресурсы
 - `templates/weather.html` — шаблон карточки погоды
 
+### Деплой
+
+Приложение доступно онлайн: [https://armontex.github.io/weather-app/](https://armontex.github.io/weather-app/)
+
+
 ---
 
 **Автор**: [Armontex](https://github.com/Armontex)
